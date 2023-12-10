@@ -3,3 +3,26 @@
 .body-content {
 	background-color: aqua;
 }
+
+.kolko {
+	border-radius: 50%;
+	background-color: #333;
+	width: 92px;
+	height: 92px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+
+.kolko:hover {
+	background-color: #ccc;
+}
+
+.kolko img {
+	width: 64px;
+	height: 64px;
+	margin-left: 14px;
+	margin-top: 14px;
+}
