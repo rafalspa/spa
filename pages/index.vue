@@ -5,6 +5,11 @@ const toggle = () => (
 	(textButton.value = open.value ? "Hide modal" : "Show modal")
 );
 const textButton = ref("Show modal");
+
+useHead({
+	title: "Strona glowna",
+	meta: [{ name: "description", content: "moja stronka" }],
+});
 </script>
 
 <template>
