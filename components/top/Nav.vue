@@ -1,15 +1,19 @@
 <script setup>
 const name = ref("Nawigacja");
+
+const open = ref(false);
+const toggle = () => (open.value = !open.value);
+
+useHead({
+	title: "Strona glowna",
+	meta: [{ name: "description", content: "moja stronka" }],
+});
 </script>
 <template>
 	<nav class="navbar" role="navigation" aria-label="main navigation">
 		<div class="navbar-brand">
-			<a class="navbar-item" href="https://bulma.io">
-				<img
-					src="https://bulma.io/images/bulma-logo.png"
-					width="112"
-					height="28"
-				/>
+			<a class="navbar-item" href="./">
+				<img src="./img/logo.png" width="112" height="28" />
 			</a>
 
 			<a
@@ -18,6 +22,7 @@ const name = ref("Nawigacja");
 				aria-label="menu"
 				aria-expanded="false"
 				data-target="navbarBasicExample"
+				@click="toggle"
 			>
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
@@ -25,21 +30,75 @@ const name = ref("Nawigacja");
 			</a>
 		</div>
 
+		<!-- Menu dla mobilnego rozmiaru po nacisnieciu burgera -->
+		<div v-if="open">
+			<ul>
+				<li>
+					<NuxtLink to="/twoje-konto">Twoje konto</NuxtLink>
+				</li>
+				<li>
+					<NuxtLink to="/koszyk">Koszyk</NuxtLink>
+				</li>
+				<li>
+					<NuxtLink to="/laptopy-i-komputery">Laptopy i komputery</NuxtLink>
+				</li>
+				<li>
+					<NuxtLink to="/smartfony-i-telefony">Smartfony i telefony</NuxtLink>
+				</li>
+				<li>
+					<NuxtLink to="/podzespoly-komputerowe"
+						>Podzespoły komputerowe</NuxtLink
+					>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Menu dla desktopowego rozmiaru -->
 		<div id="navbarBasicExample" class="navbar-menu">
 			<div class="navbar-start">
-				<a class="navbar-item"> Home </a>
-
-				<a class="navbar-item"> Documentation </a>
-
 				<div class="navbar-item has-dropdown is-hoverable">
-					<a class="navbar-link"> More </a>
+					<a class="navbar-link" href="/laptopy-i-komputery">
+						Laptopy i komputery
+					</a>
 
 					<div class="navbar-dropdown">
-						<a class="navbar-item"> About </a>
-						<a class="navbar-item"> Jobs </a>
-						<a class="navbar-item"> Contact </a>
+						<a class="navbar-item"> Laptopy/notebooki/ultrabooki </a>
+						<a class="navbar-item"> Laptopy 2 w 1 </a>
+						<a class="navbar-item"> Laptopy gamingowe </a>
 						<hr class="navbar-divider" />
-						<a class="navbar-item"> Report an issue </a>
+						<a class="navbar-item"> Komputery PC </a>
+						<a class="navbar-item"> Komputery gamingowe </a>
+						<a class="navbar-item"> Komputery all-in-one </a>
+					</div>
+				</div>
+
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link" href="/smartfony-i-telefony">
+						Smartfony i telefony
+					</a>
+
+					<div class="navbar-dropdown">
+						<a class="navbar-item"> Apple </a>
+						<a class="navbar-item"> Samsung </a>
+						<a class="navbar-item"> Xiaomi </a>
+						<a class="navbar-item"> OnePlus </a>
+						<hr class="navbar-divider" />
+						<a class="navbar-item"> Telefony komórkowe </a>
+					</div>
+				</div>
+
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link" href="/podzespoly-komputerowe">
+						Podzespoły komputerowe
+					</a>
+
+					<div class="navbar-dropdown">
+						<a class="navbar-item"> Procesory </a>
+						<a class="navbar-item"> Karty graficzne </a>
+						<a class="navbar-item"> Płyty główne </a>
+						<a class="navbar-item"> Pamięci RAM </a>
+						<a class="navbar-item"> Dyski twarde SSD i HDD </a>
+						<a class="navbar-item"> Zasilacze </a>
 					</div>
 				</div>
 			</div>
@@ -47,25 +106,13 @@ const name = ref("Nawigacja");
 			<div class="navbar-end">
 				<div class="navbar-item">
 					<div class="buttons">
-						<a class="button is-primary">
-							<strong>Sign up</strong>
-						</a>
-						<a class="button is-light"> Log in </a>
+						<button class="button is-info is-light">Twoje konto</button>
+						<button class="button is-info is-light">Koszyk</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</nav>
-	<h1>{{ name }}</h1>
-	<ul>
-		<li>
-			<NuxtLink to="/">Strona Główna</NuxtLink>
-		</li>
-		<li><NuxtLink to="/about">O nas (SPA)</NuxtLink></li>
-		<li class="mpa"><a href="/about">O nas (MPA)</a></li>
-		<li><NuxtLink to="/articles/Artykul 1">Artykul 1</NuxtLink></li>
-		<li><NuxtLink to="/articles/Artykul 2">Artykul 2</NuxtLink></li>
-	</ul>
 </template>
 <style scoped lang="scss">
 h1 {
