@@ -11,7 +11,7 @@ useHead({
 
 <template>
 	<h1>Koszyk</h1>
-	<h2>Polecamy:</h2>
+	<h2>Twoje produkty w koszyku:</h2>
 	<div class="columns" style="width: 100vw; text-align: center">
 		<div class="column">
 			<img src="./img/ip15.png" width="184" />
@@ -34,16 +34,5 @@ useHead({
 			<div>4 999,00 zł</div>
 		</div>
 	</div>
-	<hr />
-	<h2>Kategorie:</h2>
-	<div class="columns" style="width: 100vw; text-align: center">
-		<div class="column">
-			<img src="./img/ip15.png" width="184" />
-			<div><strong>Smartfony (320)</strong></div>
-		</div>
-		<div class="column">
-			<img src="./img/nokia.png" width="250" />
-			<div><strong>Telefony komórkowe (72)</strong></div>
-		</div>
-	</div>
+	<button class="button is-medium is-link">Zamów i zapłać</button>
 </template>

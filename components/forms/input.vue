@@ -8,6 +8,7 @@ const valueDef = ref(props.valInput);
 
 watch(valueDef, (newVal, oldVal) => {
 	console.log(newVal, oldVal);
+	emit("sendValue", newVal);
 });
 </script>
 
