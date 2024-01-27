@@ -50,6 +50,9 @@ useHead({
 						>Podzespoły komputerowe</NuxtLink
 					>
 				</li>
+				<li>
+					<NuxtLink to="/kontakt">Kontakt</NuxtLink>
+				</li>
 			</ul>
 		</div>
 
@@ -62,13 +65,25 @@ useHead({
 					</a>
 
 					<div class="navbar-dropdown">
-						<a class="navbar-item"> Laptopy/notebooki/ultrabooki </a>
-						<a class="navbar-item"> Laptopy 2 w 1 </a>
-						<a class="navbar-item"> Laptopy gamingowe </a>
+						<a class="navbar-item" href="/laptopy-i-komputery">
+							Laptopy/notebooki/ultrabooki
+						</a>
+						<a class="navbar-item" href="/laptopy-i-komputery">
+							Laptopy 2 w 1
+						</a>
+						<a class="navbar-item" href="/laptopy-i-komputery">
+							Laptopy gamingowe
+						</a>
 						<hr class="navbar-divider" />
-						<a class="navbar-item"> Komputery PC </a>
-						<a class="navbar-item"> Komputery gamingowe </a>
-						<a class="navbar-item"> Komputery all-in-one </a>
+						<a class="navbar-item" href="/laptopy-i-komputery">
+							Komputery PC
+						</a>
+						<a class="navbar-item" href="/laptopy-i-komputery">
+							Komputery gamingowe
+						</a>
+						<a class="navbar-item" href="/laptopy-i-komputery">
+							Komputery all-in-one
+						</a>
 					</div>
 				</div>
 
@@ -78,12 +93,14 @@ useHead({
 					</a>
 
 					<div class="navbar-dropdown">
-						<a class="navbar-item"> Apple </a>
-						<a class="navbar-item"> Samsung </a>
-						<a class="navbar-item"> Xiaomi </a>
-						<a class="navbar-item"> OnePlus </a>
+						<a class="navbar-item" href="/smartfony-i-telefony"> Apple </a>
+						<a class="navbar-item" href="/smartfony-i-telefony"> Samsung </a>
+						<a class="navbar-item" href="/smartfony-i-telefony"> Xiaomi </a>
+						<a class="navbar-item" href="/smartfony-i-telefony"> OnePlus </a>
 						<hr class="navbar-divider" />
-						<a class="navbar-item"> Telefony komórkowe </a>
+						<a class="navbar-item" href="/smartfony-i-telefony">
+							Telefony komórkowe
+						</a>
 					</div>
 				</div>
 
@@ -93,13 +110,29 @@ useHead({
 					</a>
 
 					<div class="navbar-dropdown">
-						<a class="navbar-item"> Procesory </a>
-						<a class="navbar-item"> Karty graficzne </a>
-						<a class="navbar-item"> Płyty główne </a>
-						<a class="navbar-item"> Pamięci RAM </a>
-						<a class="navbar-item"> Dyski twarde SSD i HDD </a>
-						<a class="navbar-item"> Zasilacze </a>
+						<a class="navbar-item" href="/podzespoly-komputerowe">
+							Procesory
+						</a>
+						<a class="navbar-item" href="/podzespoly-komputerowe">
+							Karty graficzne
+						</a>
+						<a class="navbar-item" href="/podzespoly-komputerowe">
+							Płyty główne
+						</a>
+						<a class="navbar-item" href="/podzespoly-komputerowe">
+							Pamięci RAM
+						</a>
+						<a class="navbar-item" href="/podzespoly-komputerowe">
+							Dyski twarde SSD i HDD
+						</a>
+						<a class="navbar-item" href="/podzespoly-komputerowe">
+							Zasilacze
+						</a>
 					</div>
+				</div>
+
+				<div class="navbar-item is-hoverable">
+					<a class="navbar-item" href="/kontakt"> Kontakt </a>
 				</div>
 			</div>
 
@@ -107,7 +140,9 @@ useHead({
 				<div class="navbar-item">
 					<div class="buttons">
 						<button class="button is-info is-light">Twoje konto</button>
-						<button class="button is-info is-light">Koszyk</button>
+						<a href="/koszyk"
+							><button class="button is-info is-light">Koszyk</button></a
+						>
 					</div>
 				</div>
 			</div>
