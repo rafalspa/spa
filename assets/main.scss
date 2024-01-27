@@ -1,10 +1,16 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+$kolor-tekstu: #111;
+$szare-tlo: #ddd;
+$niebieski: rgb(0, 130, 250);
+
 body {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
 .body-content {
+	color: $kolor-tekstu;
 }
 
 h1 {
@@ -13,6 +19,7 @@ h1 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
+	color: $kolor-tekstu;
 }
 
 h2 {
@@ -20,11 +27,12 @@ h2 {
 	text-decoration: bold;
 	padding-bottom: 10px;
 	padding-left: 10px;
+	color: $kolor-tekstu;
 }
 
 .kolko {
 	border-radius: 50%;
-	background-color: #ccc;
+	background-color: $niebieski;
 	width: 64px;
 	height: 64px;
 	position: fixed;
@@ -32,44 +40,125 @@ h2 {
 	bottom: 0;
 	margin-right: 8px;
 	margin-bottom: 8px;
-	opacity: 0.7;
+	padding: 20px;
 }
 
 .kolko:hover {
-	background-color: #ddd;
+	background-color: $niebieski;
 	opacity: 1;
 	scale: 1.1;
-}
-.kolko img {
-	width: 48px;
-	height: 48px;
-	margin-left: 9px;
-	margin-top: 9px;
 }
 
 .okienko {
 	width: 256px;
-	height: 128px;
+	height: 256px;
 	position: absolute;
-	right: 60px;
-	bottom: 60px;
-	padding: 24px;
-	background-color: #ddd;
-	color: #000;
-	border-radius: 10px;
+	right: 64px;
+	bottom: 64px;
+	padding: 12px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	color: $kolor-tekstu;
+}
+
+.zamknij {
+	position: absolute;
+	margin-left: 34px;
+	margin-top: -8px;
+	width: 32px;
+	height: 32px;
+	border-radius: 5px;
+	background: $niebieski;
+	border: none;
+	color: #fff;
+}
+
+.zamknij:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.zawartosc {
+	margin-top: 12px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.wiadomosc {
+	background: #eee;
+	border-radius: 8px;
+	padding: 4px 8px 4px 8px;
+	font-size: 13px;
+	margin-left: 8px;
+	margin-right: 8px;
+	width: 180px;
+}
+
+.data {
+	font-size: 10px;
+	margin-left: 35px;
+}
+
+.chat {
+	position: absolute;
+	margin-top: 85px;
+	margin-left: 0px;
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+.wyslij {
+	position: absolute;
+	margin-top: 87px;
+	margin-left: 210px;
+	opacity: 0.7;
+}
+
+.wyslij:hover {
+	cursor: pointer;
+	opacity: 1;
 }
 
 .stopka {
 	font-size: 11px;
-	color: #111;
+	color: $kolor-tekstu;
 	margin: auto auto;
 	padding-top: 35px;
-	width: 450px;
+	width: 275px;
+}
+
+.szukajka {
+	display: flex;
+	gap: 10px;
+	width: 70%;
+	margin: auto auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.column {
+	transition: all 0.1s ease-in;
 }
 
 .column:hover {
-	outline: 1px solid #ddd;
 	background: #eee;
 	cursor: pointer;
-	border-radius: 15px;
+	scale: 1.05;
+}
+
+@media only screen and (max-width: 1024px) {
+	.mobilnemenu {
+		display: block;
+	}
+	li {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	.mobilnemenu {
+		display: none;
+	}
 }

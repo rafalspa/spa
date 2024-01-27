@@ -31,7 +31,7 @@ useHead({
 		</div>
 
 		<!-- Menu dla mobilnego rozmiaru po nacisnieciu burgera -->
-		<div v-if="open">
+		<div v-if="open" class="mobilnemenu">
 			<ul>
 				<li>
 					<NuxtLink to="/twoje-konto">Twoje konto</NuxtLink>
