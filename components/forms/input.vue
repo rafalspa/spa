@@ -13,7 +13,13 @@ watch(valueDef, (newVal, oldVal) => {
 
 <template>
 	{{ name }}
-	<input v-model="valueDef" /><br />
+
+	<input
+		class="input is-primary"
+		type="text"
+		placeholder="Wprowadz tekst"
+		v-model="valueDef"
+	/><br />
 </template>
 
 <style scoped></style>

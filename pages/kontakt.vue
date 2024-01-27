@@ -11,7 +11,7 @@ const getData = (e) => {
 		@sendValue="getData($event)"
 	/>
 	<FormsInput
-		:name="'Podaj nawisko'"
+		:name="'Podaj nazwisko'"
 		:valInput="''"
 		@sendValue="getData($event)"
 	/>
